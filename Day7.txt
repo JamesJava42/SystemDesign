@@ -3,3 +3,44 @@ Comparable-Comparator
 Object-toString,hashcode,equals
 //
 //write code Collection.sort() in List<>(string,integer) and match with priorityQueues();
+
+Notes:
+  List of INtegers,String,Boolean,double,char can be sorted because these can be compared to each other
+  priorityQueue of Integer,String, double ,char will work compared toeach other.
+  Sor (Collections.sort()/Arrays.sort(), priorityQueue or TreeSet, TreeMap) wont work for normal classes.
+  custom objects are not sorted using using above method we get Exception know Comparable .
+
+  What is Comparable Interface consists?
+       Its has only one fuction int compareTo(T o).
+How is comparable interface special?
+       java designed interface meant to implement comparisions.
+       used to any java code(ArrayList,priorityQueues,TreeMap,TreeSet,Collection.sort()) which uses the comparisions.
+How to implement the comparable?
+       write body of int compareTo(T other) func  
+       this < other return -val
+       this > other return +val
+       this == other return 0;
+
+Comparable vs Comparator:
+Comparable: we have to extend the interface and overide the default method compareTo(O obj) and we decalare the comaparison attribute as return type.
+Ex public class Car implments Comparable<Car>{
+
+       int age; //need to sord based on ages;
+       @overide
+       public <Data-Tye> compareTo(Car o){
+              return this.age - o.age;
+
+       }
+}
+ArrayList<Integer> data = new ArrayList<>();
+
+Collections.sort(data) --merge
+Arrays.sort(data)      --quick sort (//gives comarater-error
+Collections.sort(data,new Comparator()
+
+public int comparator(Car l1,car l2){
+       return l1.age - l2.age;
+}
+ 
+
+Programes: F8                         

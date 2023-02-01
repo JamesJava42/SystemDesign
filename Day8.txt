@@ -1,0 +1,8 @@
+Iterator vs Iterable
+Object --> toString(),equals and hashcode
+
+Notes:
+     Iterator Design Pattren : For looping accros all items fo a collection of data with out changing the data.
+     Impleted via 2 Interfaces(Iterator,Iterable) Syntactical sugar of foreach loop.
+
+Programes : F9
