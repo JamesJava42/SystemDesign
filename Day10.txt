@@ -1,0 +1,24 @@
+//Sysrem Design Day 8 is absent
+
+Object -- toString,equals,hashcode
+
+If we work on a custom class which have 2 + attributes and we use that in map and perform the fre operation the we need to override the hascode() and equals() methods in the custom class.
+
+class man{
+    int age ;
+    int code;
+
+    @override
+    public Object equals(Object a ){
+        a.age==this.age;
+        a.code=this.code;
+
+    }
+    @overide 
+    public int hashcode(){
+        return this.age+this.code;
+    }
+
+}
+
+HashMap<Man,Ineger> out = new HashMap<>(); //this wont get the freq as per result.
